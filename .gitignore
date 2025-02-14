@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Xcode
+*.xcworkspace
+*.xcuserdata
+*.xcuserstate
+build/
+DerivedData/
+Pods/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo

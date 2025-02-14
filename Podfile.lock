@@ -1,0 +1,29 @@
+PODS:
+  - DebugSwift (0.3.9)
+  - SnapKit (5.7.1)
+
+DEPENDENCIES:
+  - DebugSwift (from `https://github.com/DebugSwift/DebugSwift.git`, branch `main`)
+  - SnapKit (~> 5.7.1)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  DebugSwift:
+    :branch: main
+    :git: https://github.com/DebugSwift/DebugSwift.git
+
+CHECKOUT OPTIONS:
+  DebugSwift:
+    :commit: 7b3d481d1e8464553e8803c18acbd69780f3314c
+    :git: https://github.com/DebugSwift/DebugSwift.git
+
+SPEC CHECKSUMS:
+  DebugSwift: 2b98f1edb9f19a59dc41cd14cf522249d8758302
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+
+PODFILE CHECKSUM: cca6a613e8ba093a5d402016eb438917154f75d3
+
+COCOAPODS: 1.16.2

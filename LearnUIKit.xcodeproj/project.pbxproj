@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C68453D5E063779617A69CC1 /* libPods-LearnUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1CB8F2B44EC9CE0817F313 /* libPods-LearnUIKit.a */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		5FFD56FA3C6D369962CE1BA8 /* Pods-LearnUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnUIKit.release.xcconfig"; path = "Target Support Files/Pods-LearnUIKit/Pods-LearnUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		AF9471C12D5FA02400B3C649 /* LearnUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37B0B7DA9AD8CCCF6AC3600 /* Pods-LearnUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnUIKit.debug.xcconfig"; path = "Target Support Files/Pods-LearnUIKit/Pods-LearnUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		FB1CB8F2B44EC9CE0817F313 /* libPods-LearnUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnUIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68453D5E063779617A69CC1 /* libPods-LearnUIKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25B5685C7A4F87DC02274899 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F37B0B7DA9AD8CCCF6AC3600 /* Pods-LearnUIKit.debug.xcconfig */,
+				5FFD56FA3C6D369962CE1BA8 /* Pods-LearnUIKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		588F46B094721A2C11D8510D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB1CB8F2B44EC9CE0817F313 /* libPods-LearnUIKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF9471B82D5FA02400B3C649 = {
 			isa = PBXGroup;
 			children = (
 				AF9471C32D5FA02400B3C649 /* LearnUIKit */,
 				AF9471C22D5FA02400B3C649 /* Products */,
+				25B5685C7A4F87DC02274899 /* Pods */,
+				588F46B094721A2C11D8510D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF9471D42D5FA02500B3C649 /* Build configuration list for PBXNativeTarget "LearnUIKit" */;
 			buildPhases = (
+				51F0D19E6A01E2CB048C5E1A /* [CP] Check Pods Manifest.lock */,
 				AF9471BD2D5FA02400B3C649 /* Sources */,
 				AF9471BE2D5FA02400B3C649 /* Frameworks */,
 				AF9471BF2D5FA02400B3C649 /* Resources */,
+				6F264F020F1E61F88F1E2C72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				AF9471C32D5FA02400B3C649 /* LearnUIKit */,
 			);
 			name = LearnUIKit;
-			packageProductDependencies = (
-			);
 			productName = LearnUIKit;
 			productReference = AF9471C12D5FA02400B3C649 /* LearnUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51F0D19E6A01E2CB048C5E1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnUIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F264F020F1E61F88F1E2C72 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnUIKit/Pods-LearnUIKit-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnUIKit/Pods-LearnUIKit-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnUIKit/Pods-LearnUIKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF9471BD2D5FA02400B3C649 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,19 +209,21 @@
 /* Begin XCBuildConfiguration section */
 		AF9471D52D5FA02500B3C649 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37B0B7DA9AD8CCCF6AC3600 /* Pods-LearnUIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 698D5RK39T;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -168,19 +239,21 @@
 		};
 		AF9471D62D5FA02500B3C649 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FFD56FA3C6D369962CE1BA8 /* Pods-LearnUIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 698D5RK39T;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
