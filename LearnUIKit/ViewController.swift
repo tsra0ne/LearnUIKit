@@ -23,8 +23,12 @@ class ViewController: UIViewController {
         view.backgroundColor = .discord
         view.addSubview(hwLabel)
         
+        hwLabel.backgroundColor = .purple
+        
         hwLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.height.equalTo(44)
         }
     }
 
