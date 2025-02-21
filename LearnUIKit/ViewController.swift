@@ -6,14 +6,27 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
+    var hwLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Hello, World"
+        label.textColor = .white
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .discord
+        view.addSubview(hwLabel)
+        
+        hwLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
-
 
 }
 
