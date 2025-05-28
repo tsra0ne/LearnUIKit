@@ -32,11 +32,11 @@ class MainViewController: UIViewController, CustomAlertDelegate {
     }
     
     func alertDidConfirm() {
-        debugPrint("User confirmed the alert")
+        NSLog("User confirmed the alert")
     }
     
     func alertDidCancel() {
-        debugPrint("User cancelled the alert")
+        NSLog("User cancelled the alert")
     }
 
 }
