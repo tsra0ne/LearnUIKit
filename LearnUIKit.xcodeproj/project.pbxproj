@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AFF37E2A2DE6D0200084C59E /* DebugSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AFF37E292DE6D0200084C59E /* DebugSwift */; };
+		AFF37E2D2DE6D1CE0084C59E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AFF37E2C2DE6D1CE0084C59E /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AFF37E102DE6CE620084C59E /* LearnUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF37E2A2DE6D0200084C59E /* DebugSwift in Frameworks */,
+				AFF37E2D2DE6D1CE0084C59E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = LearnUIKit;
 			packageProductDependencies = (
+				AFF37E292DE6D0200084C59E /* DebugSwift */,
+				AFF37E2C2DE6D1CE0084C59E /* SnapKit */,
 			);
 			productName = LearnUIKit;
 			productReference = AFF37E102DE6CE620084C59E /* LearnUIKit.app */;
@@ -107,6 +116,10 @@
 			);
 			mainGroup = AFF37E072DE6CE620084C59E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AFF37E282DE6D0200084C59E /* XCRemoteSwiftPackageReference "DebugSwift" */,
+				AFF37E2B2DE6D1CE0084C59E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AFF37E112DE6CE620084C59E /* Products */;
 			projectDirPath = "";
@@ -149,9 +162,9 @@
 				INFOPLIST_FILE = LearnUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -176,9 +189,9 @@
 				INFOPLIST_FILE = LearnUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +346,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFF37E282DE6D0200084C59E /* XCRemoteSwiftPackageReference "DebugSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DebugSwift/DebugSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		AFF37E2B2DE6D1CE0084C59E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFF37E292DE6D0200084C59E /* DebugSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFF37E282DE6D0200084C59E /* XCRemoteSwiftPackageReference "DebugSwift" */;
+			productName = DebugSwift;
+		};
+		AFF37E2C2DE6D1CE0084C59E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFF37E2B2DE6D1CE0084C59E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFF37E082DE6CE620084C59E /* Project object */;
 }
