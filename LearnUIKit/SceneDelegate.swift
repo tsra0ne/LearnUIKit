@@ -18,7 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ViewController()
+        
+        let firstVC = UINavigationController(rootViewController: ViewController())
+        let secondVC = UINavigationController(rootViewController: SecondViewController())
+        let splitViewController = UISplitViewController()
+        splitViewController.preferredDisplayMode = .oneBesideSecondary
+        splitViewController.preferredPrimaryColumnWidthFraction = 0.3
+        splitViewController.viewControllers = [firstVC, secondVC]
+        splitViewController.delegate = splitViewController as? UISplitViewControllerDelegate
+        
+        window?.rootViewController = splitViewController
         window?.makeKeyAndVisible()
     }
 
