@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,11 @@ class ViewController: UIViewController {
         view.backgroundColor = .blue
     }
 
-
 }
 
+class SecondViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .red
+    }
+}

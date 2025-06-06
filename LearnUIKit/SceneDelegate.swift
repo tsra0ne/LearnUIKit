@@ -18,7 +18,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ViewController()
+        
+        let tabBarController = UITabBarController()
+        let firstVC = ViewController()
+        let secondVC = SecondViewController()
+        let firstNavC = UINavigationController(rootViewController: firstVC)
+        let secondNavC = UINavigationController(rootViewController: secondVC)
+        
+        firstNavC.tabBarItem = UITabBarItem(
+            title: "Home",
+            image: UIImage(systemName: "house"),
+            selectedImage: UIImage(systemName: "house.fill")
+        )
+        secondNavC.tabBarItem = UITabBarItem(
+            title: "Downloads",
+            image: UIImage(systemName: "arrowshape.down"),
+            selectedImage: UIImage(systemName: "arrowshape.down.fill")
+        )
+        secondNavC.tabBarItem.badgeValue = "3"
+        tabBarController.viewControllers = [firstNavC, secondNavC]
+        tabBarController.tabBar.tintColor = .systemBlue // Selected tab color
+        tabBarController.tabBar.unselectedItemTintColor = .systemGray // Unselected tab color
+        tabBarController.tabBar.backgroundColor = .systemBackground
+        
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 
