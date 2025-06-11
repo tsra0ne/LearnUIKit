@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,16 @@ class ViewController: UIViewController {
         view.backgroundColor = .blue
     }
 
-
 }
 
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text("Hello, SwiftUI!")
+                .font(.title)
+            Button("Tap Me") {
+                print("Button tapped")
+            }
+        }
+    }
+}
